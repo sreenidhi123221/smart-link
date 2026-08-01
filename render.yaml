@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: smart-link
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    rootDir: backend
+    plan: free
+    autoDeploy: true
+
+    envVars:
+      - key: MYSQL_HOST
+        sync: false
+      - key: MYSQL_USER
+        sync: false
+      - key: MYSQL_PASSWORD
+        sync: false
+      - key: MYSQL_DATABASE
+        sync: false
