@@ -2,8 +2,8 @@ services:
   - type: web
     name: smart-link
     runtime: docker
-    dockerfilePath: ./backend/Dockerfile
     rootDir: backend
+    dockerfilePath: ./Dockerfile
     plan: free
     autoDeploy: true
 
