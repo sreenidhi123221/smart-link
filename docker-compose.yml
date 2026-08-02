@@ -1,7 +1,9 @@
-services:
+version: "3.9"
 
+services:
   flask:
-    build: ./backend
+    build: .
+
     container_name: smartlink-flask
 
     ports:
@@ -14,8 +16,10 @@ services:
       - .env
 
   mysql:
-    image: mysql:8
+    image: mysql:8.0
+
     container_name: smartlink-mysql
+
     restart: always
 
     environment:
